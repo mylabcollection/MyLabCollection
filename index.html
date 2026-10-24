@@ -2376,7 +2376,7 @@ body.dark-mode input, body.dark-mode select, body.dark-mode textarea { backgroun
                 if (mode === 'auto') {
                     const now = new Date();
                     const timeText = now.toLocaleTimeString([], {hour: 'numeric', minute: '2-digit'});
-                    status.textContent = 'Auto Mode is on. Current device time: ' + timeText + '. ' + (theme === 'dark' ? 'Night Mode is active until 6:00 AM.' : 'Light Mode is active until 5:00 PM.') + ' Uses device local time; no Google/API connection required.';
+                    status.textContent = '' + timeText + '. ' + (theme === 'dark' ? 'Night Mode is active until 6:00 AM.' : 'Light Mode is active until 5:00 PM.') + '';
                 } else {
                     status.textContent = mode === 'dark' ? 'Night Mode is fixed and will stay on whenever you reopen the app.' : 'Light Mode is fixed and will stay on whenever you reopen the app.';
                 }
