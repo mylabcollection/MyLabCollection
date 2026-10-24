@@ -191,6 +191,12 @@
             align-items: center;
             gap: 8px;
         }
+        .app-header-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
         main {
             flex: 1;
             padding: 16px;
@@ -521,7 +527,7 @@ body.dark-mode input, body.dark-mode select, body.dark-mode textarea { backgroun
     <div id="app-shell" class="hidden">
         <header>
             <div class="logo-area">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 3v12h-5c-.5 3-1.5 5-4 5s-3.5-2-4-5H5V3h14zM6 6h12M6 9h12"/></svg>
+              <img src="/logo.png" alt="My Lab Collection Logo" class="app-header-logo">
                 <span>My Lab Collection</span>
             </div>
             <div class="flex items-center gap-2">
