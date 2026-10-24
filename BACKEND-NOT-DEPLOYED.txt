@@ -1,0 +1,2 @@
+Scheduled background push is NOT enabled by this package alone.
+Before adding Firebase Cloud Functions, inspect the live Firestore security rules and choose a verified push subscription design. Do not deploy any permissive rules. The current frontend only supports in-app history, on-launch summaries, and the service-worker push event receiver.
