@@ -2176,7 +2176,7 @@ html { scroll-behavior: smooth; }
             const lab = appData.labs.find(l => l.id === activeReceiptRecord.labId);
             if (!lab || !lab.phone) { alert("Laboratory WhatsApp number not configured."); return; }
             // Internal collection ID is deliberately excluded from the laboratory message.
-            const msg = `*SAMPLE COLLECTION NOTIFICATION*\n` +
+            const msg = `\n` +
                 `Patient: ${String(activeReceiptRecord.name || '').toLocaleUpperCase()} (${activeReceiptRecord.age}Y/${activeReceiptRecord.gender})\n` +
                 `Phone: ${activeReceiptRecord.phone}\n` +
                 `Doctor: ${activeReceiptRecord.doctor}\n` +
