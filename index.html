@@ -2095,7 +2095,7 @@ html { scroll-behavior: smooth; }
             const retentionNote = document.getElementById('records-retention-note');
             if (retentionNote) retentionNote.textContent = query
                 ? 'Search results include older records too. Historical records remain stored in Firebase.'
-                : 'Showing records from the last 30 days. Older records remain in Firebase and can be found by patient name, phone or Collection ID.';
+                : '';
 
             if (filtered.length === 0) {
                 container.innerHTML = `<div class="card text-center text-muted">No matching collection records found.</div>`;
@@ -2503,7 +2503,7 @@ html { scroll-behavior: smooth; }
                     document.body.appendChild(a); a.click(); a.remove();
                     setTimeout(() => URL.revokeObjectURL(url), 60000);
                 }
-                const whatsappUrl = `https://wa.me/${recipient}?text=${encodeURIComponent(receiptText + (file ? '\n\nThe professionally formatted receipt PDF has been downloaded. Please attach it in this chat before sending.' : ''))}`;
+                const whatsappUrl = `https://wa.me/${recipient}?text=${encodeURIComponent(receiptText + (file ? '\n\n' : ''))}`;
                 const opened = window.open(whatsappUrl, '_blank');
                 if (!opened) window.location.href = whatsappUrl;
                 if (file) alert('The new-format receipt PDF has been downloaded. Attach it in WhatsApp before sending the message.');
