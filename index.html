@@ -2006,9 +2006,7 @@ html { scroll-behavior: smooth; }
             const retentionNote = document.getElementById('records-retention-note');
             if (retentionNote) retentionNote.textContent = query
                 ? 'Search results include older records too. Historical records remain stored in Firebase.'
-                : 'Showing records from the last 30 days. Older records remain in Firebase and can be found by patient name, phone or Collection ID.';
-
-            if (filtered.length === 0) {
+                            if (filtered.length === 0) {
                 container.innerHTML = `<div class="card text-center text-muted">No matching collection records found.</div>`;
                 return;
             }
